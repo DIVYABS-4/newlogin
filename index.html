@@ -137,7 +137,7 @@
     <h2 class="alert alert-secondary" id="nav"> Sign In with Google </h2>
     <div class="g-signin2" data-onsuccess="onSignIn"></div>
     <div class="data">
-       <button type="submit" class="alert alert-danger" id="sout" onclick="signOut();">Sign out</button>
+       <button type="submit" class="alert alert-danger" href="https://eloquent-shirley-0c26dc.netlify.app/" id="sout" onclick="signOut();">Sign out</button>
     </div>
     
     
@@ -201,7 +201,6 @@
     var auth2 = gapi.auth2.getAuthInstance();
     auth2.signOut().then(function () {
          $(".g-signin2").css("display", "block");
-          $("#form1").css("display", "none");
     });
     
     auth2.disconnect();
