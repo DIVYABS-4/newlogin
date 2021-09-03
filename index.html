@@ -136,8 +136,8 @@
    
     <h2 class="alert alert-secondary" id="nav"> Sign In with Google </h2>
     <div class="g-signin2" data-onsuccess="onSignIn"></div>
-    <div class="data">
-       <button type="submit" class="alert alert-danger" href="https://eloquent-shirley-0c26dc.netlify.app/" id="sout" onclick="signOut();">Sign out</button>
+   <div class="data">
+        <button type="button" class="btn btn-danger" onclick="signOut();" id="out">Sign Out</button>
     </div>
     
     
@@ -200,11 +200,9 @@
   function signOut() {
     var auth2 = gapi.auth2.getAuthInstance();
     auth2.signOut().then(function () {
-         $(".g-signin2").css("display", "block");
+      console.log('User signed out.');
     });
-    
-    auth2.disconnect();
-}
+  }
 </script>
 <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
