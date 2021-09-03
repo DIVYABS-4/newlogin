@@ -201,6 +201,7 @@
     var auth2 = gapi.auth2.getAuthInstance();
     auth2.signOut().then(function () {
          $(".g-signin2").css("display", "block");
+          $("#form1").css("display", "none");
     });
     
     auth2.disconnect();
